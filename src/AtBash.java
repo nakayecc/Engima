@@ -12,3 +12,11 @@ public class AtBash {
         }
         return outputCipherText;
     }
+
+    public String atBashDecodder(String coddedString) {
+        String[] cipherText = new String[3];
+        cipherText[2] = coddedString;
+        return atBashCodder(cipherText);
+
+    }
+}
