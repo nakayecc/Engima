@@ -1,6 +1,6 @@
 public class AtBash {
 
-    public static String atBashCodder(String[] args) {
+    public String atBashCodder(String[] args) {
         String dataToCipher = args[2].toLowerCase();
         String outputCipherText = "";
 
