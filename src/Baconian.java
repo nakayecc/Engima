@@ -37,7 +37,7 @@ public class Baconian {
 
     public String baconianCipherCodder(String[] args) {
         String outputCode = "";
-        String toCript = args[1].toUpperCase();
+        String toCript = args[2].toUpperCase();
         char[] toCriptChar = toCript.toCharArray();
 
         for (int i = 0; i < toCript.length(); i++) {
