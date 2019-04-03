@@ -49,4 +49,33 @@ public class Baconian {
         return outputCode;
 
     }
+
+    public String baconianCipherDecodder(String coddedString) {
+        coddedString = coddedString.replace(" ", "");
+        int begin = 0;
+        int end = 5;
+        String FindChar = "";
+
+        for (int i = 0; i < (coddedString.length() / 5); i++) {
+            FindChar += findValueByKey(dict, coddedString.substring(begin, end));
+            begin += 5;
+            end += 5;
+
+        }
+        return FindChar;
+    }
+
+    public Object findValueByKey(HashMap hashMap, String value) {
+
+        Iterator hmIterator = hashMap.entrySet().iterator();
+
+        while (hmIterator.hasNext()) {
+            Map.Entry mapElement = (Map.Entry) hmIterator.next();
+            if (value.equals(mapElement.getValue())) {
+                return mapElement.getKey();
+            }
+        }
+        return "-1";
+
+    }
 }
