@@ -3,6 +3,8 @@ public class Main {
 
         Baconian b = new Baconian();
         AtBash aB = new AtBash();
+        xor1 x = new xor1();
+        cezarc c = new cezarc();
 
 
         if( args[0].equals("-e") && args[1].equals("baconian")) {
@@ -17,5 +19,21 @@ public class Main {
         else if ( args[0].equals("-d") && args[1].equals("atBash")) {
             System.out.println(aB.atBashDecodder(args[2]));
         }
+
+
+        else if( args[0].equals("-e") && args[1].equals("xor")) {
+            System.out.println(x.cipherCoder(args));
+        }
+        else if ( args[0].equals("-d") && args[1].equals("xor")) {
+            System.out.println(x.cipherDecoder(args));
+        }
+
+        else if( args[0].equals("-e") && args[1].equals("caesar")) {
+            System.out.println(c.cipherCoder(args));
+        }
+        else if ( args[0].equals("-d") && args[1].equals("caesar")) {
+            System.out.println(c.cipherDecoder(args));
+        }
+
     }
 }
